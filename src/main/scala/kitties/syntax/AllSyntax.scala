@@ -6,4 +6,3 @@ trait AllSyntax extends MonoidSyntax
   with MonadSyntax
   with FoldableSyntax
   with TraverseSyntax
-  with ParallelSyntax
