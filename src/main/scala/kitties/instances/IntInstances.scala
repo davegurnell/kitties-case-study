@@ -3,7 +3,7 @@ package kitties.instances
 import kitties.Monoid
 
 trait IntInstances {
-  implicit val intInstances: Monoid[Int] =
+  implicit val intMonoid: Monoid[Int] =
     new Monoid[Int] {
       override def empty: Int =
         0
