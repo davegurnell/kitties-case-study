@@ -28,6 +28,7 @@ Make sure your definitions are included in `AllInstances`, and add a couple of u
 These three type classes give us an essential set of methods for sequencing operations on context-like data types like `Option`, `List`, `Either`, and `Future`:
 
 | Type class  | Start with | Method  | Parameter | End with  |
+| ----------- | ---------- | ------- | --------- | --------- |
 | Functor     | F[A]       | map     | A => B    | F[B]      |
 | Applicative | A          | pure    | -         | F[A]      |
 | Applicative | F[A]       | product | F[B]      | F[(A, B)] |
