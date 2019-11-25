@@ -27,7 +27,12 @@ Make sure your definitions are included in `AllInstances`, and add a couple of u
 
 These three type classes give us an essential set of methods for sequencing operations on context-like data types like `Option`, `List`, `Either`, and `Future`:
 
-[Untitled](https://www.notion.so/11bf420820834ecb82ea896cf7f14a3b)
+| Type class  | Start with | Method  | Parameter | End with  |
+| ----------- | ---------- | ------- | --------- | --------- |
+| Functor     | F[A]       | map     | A => B    | F[B]      |
+| Applicative | A          | pure    | -         | F[A]      |
+| Applicative | F[A]       | product | F[B]      | F[(A, B)] |
+| Monad       | F[A]       | flatMap | A => F[B] | F[B]      |
 
 (Note: Cats defines an additional method on `Applicative` called `ap`. We're going to skip that method here because `product` will give us everything we need, albeit in a slightly less performant way.)
 
